@@ -4,20 +4,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Git Course</title>
+  <title>Grid Course</title>
   <link rel="stylesheet" href="styles.css">
  </head>
 <body>
-  <h1>Hello Git</h1>
-  <div class="cl">ds;fkjg;skgd;k</div>
+  
   <style>
-    .cl {
-      width: 50px;
-      height: 50px;
-      margin: 25px;
-      padding: 15px;
-      border: 5px solid blue;
-    }
+    
+     .container {
+       display: grid;
+       grid-template-areas: 
+                      'header header'
+                      'sidebar content';
+       grid-gap: 10px;
+       grid-template-columns: 150px 1fr;
+       grid-template-rows: 50px 1fr;
+      }      
+     .item {
+       padding: 10px;
+       border: 1px solid black;
+      }
+      .header {
+        grid-area: header;
+
+      }
+      .sidebar {
+        grid-area: sidebar;
+        align-self: start;
+
+      }
+      .content {
+        grid-area: content;
+      }
+       
+     
   </style>
-  </body>
+    <div class="container">
+      <div class="item header">header</div>
+      <div class="item sidebar">sidebar</div>
+      <div class="item content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed adipisci temporibus, consequatur laboriosam eveniet quia magni alias qui recusandae repudiandae, corporis voluptatum ad sapiente ullam reprehenderit. Distinctio incidunt cupiditate, cum saepe similique ea doloremque. Fugit minus quasi a earum, id atque deserunt dolorem beatae, odio iusto quaerat tempore vel cum?</div>
+    </div>
+    </body>
 </html>
